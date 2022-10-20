@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 body{
+    min-width: 350px;
     background-color: #EEF9BF;
 
     font-family: 'Roboto', sans-serif;
@@ -7,6 +8,7 @@ body{
 }
 
 h1{
+
     font-size: 36px;
     font-weight: 700;
 
@@ -16,28 +18,71 @@ h1{
     margin: 40px 12px;
 }
 
-.card-container{
+.cards-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    padding: 0 93px;
+    padding: 0 90px;
 }
 
 .card{
-    min-width: 117px;
-    min-height: 146px;
+    width: 117px;
+    height: 146px;
 
     background-color: #A7E9AF;
     border: 1px solid #99CEA8;
     border-radius: 5px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     margin: 17px;
 
     padding: 22px 8px;
+
+    transition: all .3s ease-in-out;
+
+    position: relative;
+}
+.card div{
+    width: 117px;
+    height: 146px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 22px;
+    left: 8px;
+}
+
+.back{
+    opacity: 1;
+    transition: all 0s ease-in-out .15s;
+}
+.front{
+    opacity: 0;
+    transition: all 0s ease-in-out .15s;
+}
+
+.card img {
+    width:100%;
+}
+
+.turn{
+    transform: rotateY(180deg);
+}
+
+.turn .back{
+    opacity: 0;
+}
+.turn .front{
+    opacity: 1;
+}
+
+@media screen and (min-width: 650px) {
+    h1{
+        font-size: 56px;
+    }
 }
