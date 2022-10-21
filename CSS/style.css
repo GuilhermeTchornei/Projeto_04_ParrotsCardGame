@@ -18,6 +18,26 @@ h1{
     margin: 40px 12px;
 }
 
+h2{
+    font-size: 26px;
+    font-weight: 500;
+
+    color: #75B79E;
+    text-align: right;
+
+    position: fixed;
+    top: 4px;
+    right: 8px;
+}
+
+.seconds, .minutes{
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #75B79E;
+    text-align: left;
+}
+
 .cards-container{
     display: flex;
     flex-wrap: wrap;
